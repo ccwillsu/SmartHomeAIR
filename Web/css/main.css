@@ -1,0 +1,151 @@
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+HTML
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+body {margin:0; background:#000 url("../design/bg.png"); line-height:20px; font-size:17px; font-family:"helvetica", sans-serif;}
+address, blockquote, dl, fieldset, form, h1, h2, h3, h4, h5, h6, ol, p, table, ul {margin:15px 0;}
+a {color:#000;}
+h1 {font-size:20px;}
+h2 {font-size:21px; font-weight:bold;}
+h3 {font-size:19px; font-weight:bold;}
+h4, h5, h6 {font-size:17px; font-weight:bold;}
+ul li {padding-left:17px; background:url("../design/ul.png") 0 7px no-repeat;}
+ul ul {margin:0; font-size:15px;}
+ul ul li {padding-left:15px; background:url("../design/ul-ul.png") 0 7px no-repeat;}
+table th {padding:5px; font-weight:bold; text-align:center;}
+table td {padding:15px;}
+form, form dl {margin:0;}
+form dl dd {margin-bottom:5px;}
+form dl dt {color:#777;}
+img.f-left {margin-right:9px;}
+img.f-right {margin-left:9px;}
+.input-text {width:95%; padding:4px; border:1px solid #AAA; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:url("../design/input-text.png") 0 0 repeat-x;}
+.input-submit {padding:4px;}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+LAYOUT
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+.air-td {padding:15px;text-align:center;color:#000;}
+.air-box {background:#000 url("../images/airconditioner.png");width:255px;height:128px;}
+
+
+#wrapper {position:relative; min-height:100%; overflow:auto; background:url("../design/header.png") 0 0 repeat-x; color:#FFF;}
+#header {position:relative; padding:10px 9px;}
+#header #logo {margin:0; margin-top:5px; text-align:center; text-shadow:1px 1px 2px #000; font-size:22px; font-weight:bold;}
+#header .header-button {position:absolute; top:10px; right:8px; margin:0;}
+#header .header-button a {padding:7px 10px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:url("../design/header-button.png") 0 0 repeat-x; font-size:12px; text-decoration:none; text-align:center; font-weight:bold; color:#FFF;}
+#header .header-button.left {left:8px;}
+#header .header-button.left a {background:url("../design/header-button-left.png") 0 0 repeat-x;}
+#content #nav {margin:0; font-size:14px;}
+#content #nav li {display:block; float:left; width:96px; margin:0; margin-left:8px; margin-top:8px; padding:0; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#EFEFEF url("../design/nav.png") 0 100% repeat-x; -moz-box-shadow:2px 2px 3px #000; -webkit-box-shadow:2px 2px 3px #000; box-shadow:2px 2px 3px #000;} .landscape #nav li, .landscape #nav li a {width:110px;}
+#content #nav li.active {background:#FFF url("../design/nav-active.png") 0 100% repeat-x;}
+#content #nav li a {display:block; width:96px; padding:50px 0 10px 0; background-position:50% 10px; background-repeat:no-repeat; text-align:center; text-decoration:none; color:#000; font-weight:bold;}
+#content #nav li.ico-dashboard a {background-image:url("../design/ico-dashboard.png");}
+#content #nav li.ico-pages a {background-image:url("../design/ico-pages.png");}
+#content #nav li.ico-categories a {background-image:url("../design/ico-categories.png");}
+#content #nav li.ico-comments a {background-image:url("../design/ico-comments.png");}
+#content #nav li.ico-users a {background-image:url("../design/ico-users.png");}
+#content #nav li.ico-stats a {background-image:url("../design/ico-stats.png");}
+#content #nav li.ico-contacts a {background-image:url("../design/ico-contacts.png");}
+#content #nav li.ico-images a {background-image:url("../design/ico-images.png");}
+#content #nav li.ico-search a {background-image:url("../design/ico-search.png");}
+#content #nav li.ico-settings a {background-image:url("../design/ico-settings.png");}
+#footer {position:relative; padding:25px 8px 15px 8px; background:url("../design/footer.png") 0 100% repeat-x; font-size:12px; color:#777;}
+#footer p {margin:0;}
+#footer a {color:#777;}
+#footer #footer-button {position:absolute; top:25px; right:8px;}
+#footer #footer-button a {padding:7px 10px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:url("../design/header-button-left.png") 0 0 repeat-x; text-decoration:none; text-align:center; font-weight:bold; color:#FFF;}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+PAGE: PAGES
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.pages {margin:0;}
+.pages li {padding:5px 0 5px 40px; background:url("../design/ico-pages.png") 0 0 no-repeat; font-weight:bold;}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+PAGE: CATEGORIES
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.categories {margin:0;}
+.categories li {padding:5px 0 5px 40px; background:url("../design/ico-categories.png") 0 0 no-repeat; font-weight:bold;}
+.categories li ul {margin:6px 0 0 0;}	
+.categories li ul li {padding:5px 0 5px 20px; background:url("../design/ico-arrow.png") 0 7px no-repeat; font-weight:normal;}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+PAGE: USERS
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.users {margin:0; font-size:14px; line-height:16px;}
+.users li {display:block; float:left; width:96px; margin:0; margin-left:8px; margin-bottom:8px; padding:0; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#EFEFEF url("../design/nav.png") 0 100% repeat-x; -moz-box-shadow:2px 2px 3px #000; -webkit-box-shadow:2px 2px 3px #000; box-shadow:2px 2px 3px #000;}
+.users li img {width:45px; height:45px; margin-bottom:3px; -moz-box-shadow:1px 1px 3px #777; -webkit-box-shadow:1px 1px 3px #777; box-shadow:1px 1px 3px #777;}
+.users li a {display:block; width:80px; height:100px; padding:8px; background-position:50% 10px; background-repeat:no-repeat; text-align:center; text-decoration:none; color:#000; font-weight:bold;}
+.landscape .users li {width:110px;}
+.landscape .users li a {width:94px;}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+PAGE: STATS
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.stats {margin:0;}
+.stats th, .stats td {padding:7px 8px; background:#FFF; border:1px solid #CCC; text-align:center;}
+.stats th {border-bottom:3px solid #0CF; font-weight:bold;}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+PAGE: CONTACTS
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.contacts {margin:0;}
+.contacts th, .contacts td {padding:5px 8px; background:#FFF; border-bottom:1px solid #CCC; vertical-align:middle;}
+.contacts th {width:45px; padding-left:0;}
+.contacts th img {display:block; width:45px; height:45px;}
+.contacts tr:last-child th, .contacts tr:last-child td {border:0;}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+PAGE: COMMENTS
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.comments {margin:0;}
+.comments th, .comments td {padding:10px 8px 15px 8px; background:#FFF; border-bottom:1px solid #CCC; vertical-align:middle;}
+.comments th {width:32px; padding-left:0; vertical-align:top;}
+.comments th img {display:block; width:32px; height:32x;}
+.comments tr:last-child th, .comments tr:last-child td {border:0;}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+PAGE: IMAGE GALLERY
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.gallery {margin:15px 0;}
+.gallery li {display:block; float:left; margin-left:4px; margin-bottom:4px; padding:0; background:none;}
+.gallery li img {display:block;}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+PORTLET: CONTENT BOX
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.content-box {margin:15px 8px; padding:8px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#FFF; -moz-box-shadow:2px 2px 3px #000; -webkit-box-shadow:2px 2px 3px #000; box-shadow:2px 2px 3px #000; color:#000;}
+.content-box.alt {background:#0CF;}
+.content-box.ok {background:#3A0; color:#FFF;}
+.content-box.err {background:#A00; color:#FFF;}
+.content-box p:first-child {margin-top:0;} 
+.content-box p:last-child {margin-bottom:0;}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+PORTLET: PAGINATION
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.pagination {clear:both; margin:15px 0 25px 0; text-align:center;}
+.pagination a {margin:0 3px; padding:5px 10px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#9F9F9F url("../design/pagination.png") 0 0 repeat-x; text-align:center; text-decoration:none; font-weight:bold;}
+.pagination strong {margin:0 3px; padding:5px 10px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#0AF url("../design/pagination-active.png") 0 0 repeat-x; text-align:center; color:#000;}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+UNIVERSAL STYLES
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.message {margin:0 8px; padding:8px 8px 8px 33px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#FF7 url("../design/ico-message.png") 10px 50% no-repeat; -moz-box-shadow:2px 2px 3px #000; -webkit-box-shadow:2px 2px 3px #000; box-shadow:2px 2px 3px #000; color:#000;}
+.button {padding:4px 10px; border:1px solid #AFAFAF; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#CFCFCF url("../design/button.png") 0 0 repeat-x; text-decoration:none; font-weight:bold; font-size:12px;}
+.button.red {color:#D00;}
+.button.green {color:#0A0;}
+.button.black {color:#000;}
+.smaller {font-size:12px;}
+.grey, .grey a {color:#666;}
