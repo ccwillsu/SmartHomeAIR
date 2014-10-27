@@ -5,9 +5,8 @@
 #include <IRremote.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
+#include "SmartHomeAIR.h"
 
-#define OLED_RESET 4
-//Adafruit_SSD1306 display(OLED_RESET);
 // Arduino數位腳位2接到1-Wire裝置
 #define ONE_WIRE_BUS 2
 
@@ -17,10 +16,6 @@
 #define DELTAY 2
 
 uint8_t cnt;
-
-//#if (SSD1306_LCDHEIGHT != 64)
-//#error("Height incorrect, please fix Adafruit_SSD1306.h!");
-//#endif
 
 int PassVal = 0;
 char Cmd_Buf[8];
@@ -42,23 +37,7 @@ void setup()   {
 
   sensors.begin();
 
-  Serial.println("Smart Home Ver0.1");
-/*
-  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // initialize with the I2C addr 0x3D (for the 128x64)
-  
-  display.display(); // show splashscreen
-  delay(500);
-  display.clearDisplay();   // clears the screen and buffer
-
-  // text display tests
-  display.setTextSize(1);
-  display.setTextColor(WHITE);
-  display.setCursor(0,0);
-  display.println("Smart Home Ver0.1");
-  display.setTextColor(BLACK, WHITE); // 'inverted' text
-  display.display();
-  delay(1000);
-*/
+  Serial.println(Version);
 }
 
 void loop() {
@@ -93,7 +72,7 @@ void loop() {
   Serial.println("---");
   
   ms.Target (Buf);
-  if (ms.Match ("asdf71"))
+  if (ms.Match (AccessKey))
   {
     //Serial.print ("Found match at: ");
     //Serial.println (ms.MatchStart);        // 16 in this case     
