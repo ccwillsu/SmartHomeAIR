@@ -9,13 +9,6 @@ $lines_array = file($url);
 print_r($lines_array);
 */
 
-/*
-$snoopy = new Snoopy;
-$snoopy->fetchtext("http://cca.ddns.net:8080/will71.htm?cmd=2");
-echo $snoopy->results;
-exit;
-*/
-
 // 建立CURL連線
 $ch = curl_init();
 
