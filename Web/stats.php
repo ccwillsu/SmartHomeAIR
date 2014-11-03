@@ -62,12 +62,10 @@ mysql_select_db(MYSQL_DB,$DB_Link);
 <?
 $sql = "select log_temp, log_time FROM smarthome_temp_log where log_temp > 0 order by log_no desc limit 1;";
 $result = mysql_query($sql,$DB_Link) or Die(mysql_error());
-while( $row = mysql_fetch_array($result) )
-{
-   echo "<tr>\n";
-   echo "<td>Bedroom</td><td>".$row[0]." ℃</td><td>".substr($row[1], 11, 5)." </td>\n";
-   echo "</tr>\n";
-}
+$row = mysql_fetch_array($result);
+echo "<tr>\n";
+echo "<td>Bedroom</td><td>".$row[0]." ℃</td><td>".substr($row[1], 11, 5)." </td>\n";
+echo "</tr>\n";
 ?>
 			</table>
 		

@@ -20,7 +20,7 @@ function CheckLogin()
 
 function Login($User, $Pass)
 {
-    if ($User == 'will' && $Pass == '7182')
+    if ($User == LOGIN_USERNAME && $Pass == LOGIN_PASSWORD)
     {
         setcookie("SmartHomeUser",$User);
         setcookie("SmartHomePass",$Pass);
