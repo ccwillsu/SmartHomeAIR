@@ -5,6 +5,28 @@ $User = $_POST['user'];
 $Pass = $_POST['pass'];
 $Cmd = $_GET['cmd'];
 $Page = $_GET['page'];
+
+$DB_Link = @mysql_connect(MYSQL_HOST,MYSQL_USER,MYSQL_PSWD) or Die(mysql_error());
+mysql_query("SET NAMES 'utf8'");
+mysql_select_db(MYSQL_DB,$DB_Link);
+
+//Create Table If Tables Not Exists
+$sql = "CREATE TABLE IF NOT EXISTS `smarthome_operation_log1` (
+  `log_no` int(11) NOT NULL AUTO_INCREMENT,
+  `log_op` varchar(8) NOT NULL,
+  `log_time` datetime NOT NULL,
+  PRIMARY KEY (`log_no`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 ;";
+$result = mysql_query($sql,$DB_Link) or Die(mysql_error());
+
+$sql = "CREATE TABLE IF NOT EXISTS `smarthome_temp_log1` (
+  `log_no` int(11) NOT NULL AUTO_INCREMENT,
+  `log_temp` float NOT NULL,
+  `log_time` datetime NOT NULL,
+  PRIMARY KEY (`log_no`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 ;";
+$result = mysql_query($sql,$DB_Link) or Die(mysql_error());
+
 if ($Cmd == 'logout')
 {
     Logout();
